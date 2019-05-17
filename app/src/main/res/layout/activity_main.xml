@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/myAge"
+        android:layout_width="97dp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="numberSigned"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="237dp" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/title_home"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <EditText
+        android:id="@+id/myName"
+        android:layout_width="172dp"
+        android:layout_height="67dp"
+        android:ems="10"
+        android:hint="First and Last Name"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="55dp" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="548dp" />
+
+    <EditText
+        android:id="@+id/myGrade"
+        android:layout_width="100dp"
+        android:layout_height="71dp"
+        android:ems="10"
+        android:hint="Grade"
+        android:inputType="numberSigned"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="237dp" />
+
+    <Spinner
+        android:id="@+id/myGender"
+        android:layout_width="99dp"
+        android:layout_height="65dp"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="237dp" />
+
+    <EditText
+        android:id="@+id/myHobby2"
+        android:layout_width="105dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:hint="Hobby 2"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <EditText
+        android:id="@+id/myHobby1"
+        android:layout_width="105dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:hint="Hobby 1"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="373dp" />
+
+    <EditText
+        android:id="@+id/myHobby3"
+        android:layout_width="105dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:hint="Hobby 3"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="275dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender:"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="201dp" />
+
+</android.support.constraint.ConstraintLayout>

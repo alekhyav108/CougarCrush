@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CougarCrush</string>
+    <string-array name="myGender">
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_about_you">AboutYou</string>
+    <string-array name="gender_types">
+
+        <item>Female</item>
+        <item>Male</item>
+        <item>F to M</item>
+        <item>M to F</item>
+
+    </string-array>
+    <string name="title_activity_user_profile">UserProfile</string>
+    <string name="title_activity_matched">Matched</string>
+</resources>
