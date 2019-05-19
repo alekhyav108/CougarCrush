@@ -1,5 +1,6 @@
 package com.example.cougarcrush;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    String name, hobby1, hobby2, hobby3, birth;
+    String name, hobby1, hobby2, hobby3, birth, phoneNum;
     int grade, age;
 
     EditText myName;
@@ -24,33 +25,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     EditText myHobby1;
     EditText myHobby2;
     EditText myHobby3;
-    EditText myBirth;
 
     Button submit;
+
+    EditText myPhone;
 
 
     private TextView mTextMessage;
 
-
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
-                    return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
-            }
-            return false;
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,9 +40,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         //bottom navigation code
         setContentView(R.layout.activity_main);
-        BottomNavigationView navView = findViewById(R.id.nav_view);
         mTextMessage = findViewById(R.id.message);
-        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         //spinner code
         Spinner spinner = (Spinner)findViewById(R.id.myGender);
@@ -77,7 +57,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         myHobby3 = (EditText) findViewById(R.id.myHobby3);
         myAge = (EditText) findViewById(R.id.myAge);
         myGrade = (EditText) findViewById(R.id.myGrade);
-        myBirth = (EditText) findViewById(R.id.myBirth);
+        myPhone = (EditText) findViewById(R.id.myPhone);
+
 
 
         //submit button code
@@ -89,21 +70,36 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 hobby1 = myHobby1.getText().toString();
                 hobby2 = myHobby2.getText().toString();
                 hobby3 = myHobby3.getText().toString();
-                birth = myBirth.getText().toString();
                 age = Integer.valueOf(myAge.getText().toString());
                 grade = Integer.valueOf(myGrade.getText().toString());
+                phoneNum = myPhone.getText().toString();
 
 
                 showToast(name);
                 showToast(hobby1);
                 showToast(hobby2);
                 showToast(hobby3);
-                showToast(birth);
                 showToast(String.valueOf(age));
                 showToast(String.valueOf(grade));
+                showToast(phoneNum);
+
 
             }
         });
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //opens AboutYou
+                openAboutYou();
+
+            }
+        });
+
+    }
+
+    public void openAboutYou() {
+        Intent intent = new Intent(MainActivity.this, AboutYou.class);
+        startActivity(intent);
 
     }
 
@@ -122,4 +118,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
     }
+
+
+
+
 }

@@ -8,107 +8,136 @@
     tools:context=".MainActivity">
 
     <EditText
+        android:id="@+id/myPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="484dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/phone"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="o" />
+
+    <EditText
         android:id="@+id/myAge"
         android:layout_width="97dp"
         android:layout_height="65dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="240dp"
         android:ems="10"
-        android:hint="Age"
+        android:hint="@string/age"
         android:inputType="numberSigned"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="237dp" />
-
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/title_home"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" tools:targetApi="o" />
 
     <EditText
         android:id="@+id/myName"
         android:layout_width="172dp"
         android:layout_height="67dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginRight="120dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="First and Last Name"
+        android:hint="@string/first_and_last_name"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="119dp"
-        tools:layout_editor_absoluteY="55dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="o" />
 
     <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="548dp" />
+        android:layout_height="37dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginRight="164dp"
+        android:layout_marginBottom="104dp"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/myGrade"
         android:layout_width="100dp"
         android:layout_height="71dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
         android:ems="10"
-        android:hint="Grade"
+        android:hint="@string/grade"
         android:inputType="numberSigned"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="237dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" tools:targetApi="o" />
 
     <Spinner
         android:id="@+id/myGender"
         android:layout_width="99dp"
         android:layout_height="65dp"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="237dp" />
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
+        android:layout_marginBottom="428dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/myHobby2"
         android:layout_width="105dp"
         android:layout_height="60dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginLeft="148dp"
+        android:layout_marginBottom="300dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Hobby 2"
+        android:hint="@string/hobby_2"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="371dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="o" />
 
     <EditText
         android:id="@+id/myHobby1"
         android:layout_width="105dp"
         android:layout_height="60dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="300dp"
         android:ems="10"
-        android:hint="Hobby 1"
+        android:hint="@string/hobby_1"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="373dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="" tools:targetApi="o" />
 
     <EditText
         android:id="@+id/myHobby3"
         android:layout_width="105dp"
         android:layout_height="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="300dp"
         android:ems="10"
-        android:hint="Hobby 3"
+        android:hint="@string/hobby_3"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="275dp"
-        tools:layout_editor_absoluteY="371dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:autofillHints="" tools:targetApi="o" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gender:"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="201dp" />
+        android:layout_width="65dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginLeft="172dp"
+        android:layout_marginTop="176dp"
+        android:text="@string/gender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

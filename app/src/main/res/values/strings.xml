@@ -16,4 +16,16 @@
     </string-array>
     <string name="title_activity_user_profile">UserProfile</string>
     <string name="title_activity_matched">Matched</string>
+    <string name="you_ve_been_matched_with">YOU\'VE BEEN MATCHED WITH:</string>
+    <string name="description_of_yourself_500">Description of Yourself (500)</string>
+    <string name="age">Age</string>
+    <string name="first_and_last_name">First and Last Name</string>
+    <string name="submit">Submit</string>
+    <string name="grade">Grade</string>
+    <string name="hobby_2">Hobby 2</string>
+    <string name="hobby_1">Hobby 1</string>
+    <string name="hobby_3">Hobby 3</string>
+    <string name="gender">Gender:</string>
+    <string name="phone">Phone #</string>
+    <string name="submit">Submit</string>
 </resources>
