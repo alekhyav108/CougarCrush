@@ -8,12 +8,42 @@
     tools:context=".MainActivity">
 
     <EditText
+        android:id="@+id/myAge"
+        android:layout_width="97dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="220dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/age"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/gradePref"
+        android:layout_width="139dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginLeft="256dp"
+        android:layout_marginTop="528dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/grade_preferred"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="o" />
+
+    <EditText
         android:id="@+id/myPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="484dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginRight="96dp"
+        android:layout_marginTop="424dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginRight="88dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/phone"
@@ -23,24 +53,10 @@
         tools:targetApi="o" />
 
     <EditText
-        android:id="@+id/myAge"
-        android:layout_width="97dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="240dp"
-        android:ems="10"
-        android:hint="@string/age"
-        android:inputType="numberSigned"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" tools:targetApi="o" />
-
-    <EditText
         android:id="@+id/myName"
         android:layout_width="172dp"
         android:layout_height="67dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="120dp"
         android:layout_marginRight="120dp"
         android:autofillHints=""
@@ -55,9 +71,9 @@
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="37dp"
-        android:layout_marginEnd="164dp"
-        android:layout_marginRight="164dp"
-        android:layout_marginBottom="104dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginRight="160dp"
+        android:layout_marginBottom="56dp"
         android:text="@string/submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -66,15 +82,16 @@
         android:id="@+id/myGrade"
         android:layout_width="100dp"
         android:layout_height="71dp"
-        android:layout_marginTop="232dp"
+        android:layout_marginTop="220dp"
         android:layout_marginEnd="28dp"
         android:layout_marginRight="28dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/grade"
         android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" tools:targetApi="o" />
+        tools:targetApi="o" />
 
     <Spinner
         android:id="@+id/myGender"
@@ -82,7 +99,7 @@
         android:layout_height="65dp"
         android:layout_marginStart="156dp"
         android:layout_marginLeft="156dp"
-        android:layout_marginBottom="428dp"
+        android:layout_marginBottom="444dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -90,9 +107,9 @@
         android:id="@+id/myHobby2"
         android:layout_width="105dp"
         android:layout_height="60dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginLeft="148dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginBottom="336dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/hobby_2"
@@ -105,15 +122,16 @@
         android:id="@+id/myHobby1"
         android:layout_width="105dp"
         android:layout_height="60dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="336dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/hobby_1"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:autofillHints="" tools:targetApi="o" />
+        tools:targetApi="o" />
 
     <EditText
         android:id="@+id/myHobby3"
@@ -121,13 +139,14 @@
         android:layout_height="60dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="336dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/hobby_3"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:autofillHints="" tools:targetApi="o" />
+        tools:targetApi="o" />
 
     <TextView
         android:id="@+id/textView2"
@@ -135,9 +154,30 @@
         android:layout_height="45dp"
         android:layout_marginStart="172dp"
         android:layout_marginLeft="172dp"
-        android:layout_marginTop="176dp"
-        android:text="@string/gender"
+        android:layout_marginTop="164dp"
+        android:text="@string/your_gender"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/genderPref"
+        android:layout_width="127dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginBottom="144dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginBottom="212dp"
+        android:text="@string/gender_preferred"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

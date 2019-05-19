@@ -2,10 +2,7 @@ package com.example.cougarcrush;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.support.annotation.NonNull;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,19 +13,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    String name, hobby1, hobby2, hobby3, birth, phoneNum;
-    int grade, age;
+    String name, hobby1, hobby2, hobby3, phoneNum;
+    int grade, age, gradeP;
 
     EditText myName;
     EditText myGrade;
+    EditText gradePref;
     EditText myAge;
     EditText myHobby1;
     EditText myHobby2;
     EditText myHobby3;
+    EditText myPhone;
+
 
     Button submit;
 
-    EditText myPhone;
 
 
     private TextView mTextMessage;
@@ -42,13 +41,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
         mTextMessage = findViewById(R.id.message);
 
-        //spinner code
-        Spinner spinner = (Spinner)findViewById(R.id.myGender);
-        ArrayAdapter<CharSequence> genderAdap;
-        genderAdap = ArrayAdapter.createFromResource(this, R.array.gender_types, android.R.layout.simple_spinner_item);
-        genderAdap.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(genderAdap);
-        spinner.setOnItemSelectedListener(this);
+        //spinner My Gender code
+        Spinner spinner1 = (Spinner)findViewById(R.id.myGender);
+        ArrayAdapter<CharSequence> myGenderAdap;
+        myGenderAdap = ArrayAdapter.createFromResource(this, R.array.myGender_types, android.R.layout.simple_spinner_item);
+        myGenderAdap.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner1.setAdapter(myGenderAdap);
+        spinner1.setOnItemSelectedListener(this);
+
+        //spinner Gender Preferred code
+        Spinner spinner2 = (Spinner)findViewById(R.id.myGender);
+        ArrayAdapter<CharSequence> prefGenderAdap;
+        prefGenderAdap = ArrayAdapter.createFromResource(this, R.array.myGender_types, android.R.layout.simple_spinner_item);
+        prefGenderAdap.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner2.setAdapter(prefGenderAdap);
+        spinner2.setOnItemSelectedListener(this);
+
 
         //text input code
         myName = (EditText) findViewById(R.id.myName);
@@ -57,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         myHobby3 = (EditText) findViewById(R.id.myHobby3);
         myAge = (EditText) findViewById(R.id.myAge);
         myGrade = (EditText) findViewById(R.id.myGrade);
+        gradePref = (EditText) findViewById(R.id.gradePref);
         myPhone = (EditText) findViewById(R.id.myPhone);
 
 
@@ -72,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 hobby3 = myHobby3.getText().toString();
                 age = Integer.valueOf(myAge.getText().toString());
                 grade = Integer.valueOf(myGrade.getText().toString());
+                gradeP = Integer.valueOf(gradePref.getText().toString());
                 phoneNum = myPhone.getText().toString();
 
 
@@ -81,27 +91,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 showToast(hobby3);
                 showToast(String.valueOf(age));
                 showToast(String.valueOf(grade));
+                showToast(String.valueOf(gradeP));
                 showToast(phoneNum);
 
 
             }
         });
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //opens AboutYou
-                openAboutYou();
 
-            }
-        });
 
     }
 
-    public void openAboutYou() {
-        Intent intent = new Intent(MainActivity.this, AboutYou.class);
-        startActivity(intent);
-
-    }
 
 
     private void showToast(String text){

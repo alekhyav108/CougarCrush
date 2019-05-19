@@ -1,31 +1,35 @@
 <resources>
     <string name="app_name">CougarCrush</string>
-    <string-array name="myGender">
+    <string-array name="myGender"/>
 
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_activity_about_you">AboutYou</string>
-    <string-array name="gender_types">
+
+    <string-array name="myGender_types">
 
         <item>Female</item>
         <item>Male</item>
-        <item>F to M</item>
-        <item>M to F</item>
+        <item>other</item>
 
     </string-array>
+
+
     <string name="title_activity_user_profile">UserProfile</string>
     <string name="title_activity_matched">Matched</string>
     <string name="you_ve_been_matched_with">YOU\'VE BEEN MATCHED WITH:</string>
     <string name="description_of_yourself_500">Description of Yourself (500)</string>
     <string name="age">Age</string>
     <string name="first_and_last_name">First and Last Name</string>
-    <string name="submit">Submit</string>
     <string name="grade">Grade</string>
     <string name="hobby_2">Hobby 2</string>
     <string name="hobby_1">Hobby 1</string>
     <string name="hobby_3">Hobby 3</string>
     <string name="gender">Gender:</string>
     <string name="phone">Phone #</string>
-    <string name="submit">Submit</string>
+    <string name="grade_preferred">Grade Preferred</string>
+    <string name="your_gender">Your Gender</string>
+    <string name="gender_preferred">Gender Preferred</string>
+    <string name="submit">SUBMIT</string>
+    <string name="name_of_cougar">Name of Cougar</string>
+    <string name="grade_of_cougar">Grade of Cougar</string>
+    <string name="gender_of_cougar">Gender of Cougar</string>
+    <string name="percent_compatibility">Percent Compatibility</string>
 </resources>
